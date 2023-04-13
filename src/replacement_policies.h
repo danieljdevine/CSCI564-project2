@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 struct cache_system;
 #include "memory_system.h"

@@ -29,9 +29,8 @@ int main(int argc, char **argv)
     char *prefetch_strategy = argv[5];
     size_t prefetch_amount = strtol(argv[6], &endptr, 10);
 
-    // TODO: calculate the line size and number of sets.
-    int line_size = 0;
-    int sets = 0;
+    int line_size = (int) (cache_size / cache_lines);
+    int sets = (int) (cache_lines / associativity);
 
     // Print out some parameter info
     printf("Parameter Info\n");
