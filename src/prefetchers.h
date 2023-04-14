@@ -56,4 +56,11 @@ struct prefetcher *adjacent_prefetcher_new();
 struct prefetcher *sequential_prefetcher_new(uint32_t prefetch_amount);
 struct prefetcher *custom_prefetcher_new();
 
+// This struct is used to store cache lines and the stride of the previous access
+struct line_access {
+    uint32_t address;
+    int stride;
+    int time_of_access;
+};
+
 #endif
